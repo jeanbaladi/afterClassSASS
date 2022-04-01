@@ -1,0 +1,13 @@
+@import "./variables";
+section {
+    .Licualadoras {
+        display: flex;
+        justify-content: center;
+        color:$color-primary;
+        background-color: $color-secundary;
+    }
+    .lavarropas {
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,44 @@
+header {
+    .header-image {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/bg-image.jpeg");
+        h1 {
+            font-size: 3rem;
+            color: cadetblue;
+            -webkit-text-stroke: 0.8px #072528;
+        }
+    }
+    nav {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to left, #834285cc , #151F28);    
+        ul {
+            display: flex;
+            column-gap: 100px;
+            li {
+                list-style-type: none;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                width: 70px;
+                justify-content: center;
+                transition-duration: 500ms;
+                a {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    color: aliceblue;
+                }
+                &:hover {
+                    background-image: linear-gradient(to left, #834285cc, #151F28);
+                    outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
