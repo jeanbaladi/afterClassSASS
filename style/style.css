@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+header nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, #834285cc , #151F28);
+}
+/* estilos del menu de navegacion */
+header nav ul {
+    display: flex;
+    column-gap: 100px;
+}
+header nav ul li {
+    list-style-type: none;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    justify-content: center;
+    transition-duration: 500ms;
+}
+header nav ul li:hover{
+    background-image: linear-gradient(to left, #834285cc , #151F28);
+    outline: 1px solid white;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+/* imagen de fondo y texto centrado */
+.header-image {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/bg-image.jpeg");
+}
+.header-image h1 {
+    font-size: 3rem;
+    color: cadetblue;
+    -webkit-text-stroke: 0.8px #072528;
+}
+/* main */
+main {
+    width: 80vw;
+    height: calc(100vh - 40px);
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px;
+}
+.section-card {
+    display: grid;
+    grid-template-areas: 
+            "image title"
+            "image texto";
+    grid-template-columns: 70px auto;
+    grid-template-rows: auto auto;
+}
+.section-card_title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.section-card_text {
+    grid-area: texto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.section-card_image {
+    grid-area: image;
+}
+.section-card_image .img{
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+}
+.menu-hamburguesa {
+    display: none;
+}
+.footer-text {
+    text-align: center;
+    margin: 20px 0;
+}
+@media screen and (max-width: 450px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 600px) {
+    .menu-hamburguesa {
+        display: block;
+        height: 60px;
+    } 
+    header nav {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    header > nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 850px){
+    .section-card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid cadetblue;
+    }
+    .section-card_image {
+        width: 100%;
+        height: 230px;
+    }
+    .section-card_title{
+        grid-area: title;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .section-card_text {
+        padding-top: 20px;
+    }
+    main {
+        height: fit-content;
+    }
+}

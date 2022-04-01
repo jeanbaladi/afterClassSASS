@@ -1,0 +1,5 @@
+1)Repaso de instalacion de SASS
+2)Orden de los archivos de SASS
+3)Pasar mi CSS a SCSS
+4)Nesting / anidado
+5)subir mi repositorio a githup
